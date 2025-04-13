@@ -1,14 +1,20 @@
 // TODO: Router Application
 
 const express = require('express')
-const app = express()
+// const app = express()
+
+const app = express.Router()
 
 // endpoint or API
 
 // Register a user
  // localhost:9005/auth/register
 app.post("/register", (req, res) => {
-
+   res.json({
+    result: null,
+    message: "Your account has been successfully created ",
+    meta: null
+   })
 })
 
 // email or password

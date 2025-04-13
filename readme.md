@@ -5,6 +5,13 @@
   ---> npm i express
   ---> npm i nodemon
 
+
+
+### 
+  - should be in json format
+  - the json should contain: result: <any> message:<string> meta: null | object
+
+
   - API ==> Application programming Interface
 
 
@@ -91,6 +98,22 @@ e.g.
 
   ### Express JS
       .use('url', callbackFunction(requrest, response))
+
+### Middleware
+  - Every function/actions mounting on express app is a middleware
+  - at least 3 arguments or eles 4
+    - First: always request or error object
+    - Second always response or request
+    - Third always next scope (cb function) or response
+    - Furth: nothing or next scope(cb)
+
+    e.g (req, res, next)
+    or
+    (error, req, res, next)
+.a Application level middleware
+b. Routing 
+### Controller
+
 
 ###      REST API
    Representational Stateless Transfer CRUD
