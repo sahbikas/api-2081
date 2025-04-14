@@ -2,8 +2,8 @@ const express = require('express')
 
 // express
 
-// const app = express()
-const app = express.Router()
+const app = express()
+// const app = express.Router()
 const authRouter = require("../modules/auth/auth.router")
 
 // Routing
