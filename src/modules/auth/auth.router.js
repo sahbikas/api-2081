@@ -24,14 +24,15 @@ app.post("/activate/:token", authCtrl.activateUser)
 // password set/Activate user
 app.post("/forget-Password", authCtrl.forgetPassword)
 
-// 
+// update password
 app.post("/update-password/:token", authCtrl.updatePassword)
-
+// login
 app.post("/login", authCtrl.login )
-
+// logout
 app.get("/Logout",auth, authCtrl.logout)
-
+// profile
 app.get("/me",auth, authCtrl.loggedInUser)
+// user update
 app.put("/user/:userId",auth, premissionCheck(ROLES.ADMIN), authCtrl.updateUser)
 
 module.exports = app

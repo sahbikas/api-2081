@@ -4,11 +4,12 @@ const express = require('express')
 
 const app = express()
 // const app = express.Router()
-const authRouter = require("../modules/auth/auth.router")
+const router = require('../routes/router')
 
-// Routing
+app.use("/", router)
 
-// ROuter load
-app.use('/auth', authRouter)
 
+app.use((error, req, res, next) => {
+    
+})
 module.exports = app;

@@ -2,11 +2,17 @@
 
 class AuthController{
     registerProcess = (req, res, next) => {
-        res.json({
-            result: null,
-            message: "Your account has been successfully created",
-            meta: null
-        })
+        try{
+
+        }catch(exception){
+            res.status(422).json({
+                result:{
+                    name: "Name is required"
+                },
+                message: "Validation Failed",
+                meta: null
+            })
+        }
     }
 
     verifyOTP = (req, res, next) => {
@@ -35,7 +41,17 @@ class AuthController{
     }
 
     login = (req, res, next) => {
+         try{
 
+         }catch(exception){
+           res.status(422).json({
+            result:{
+                email: "User does not exists"
+            },
+            message: "Validation Failed",
+            meta: null
+           })
+         }
     }
 
     logout = (req, res, next) => {

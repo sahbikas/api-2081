@@ -69,9 +69,12 @@
        - 
    - brand
      - CRUD
-       - 
+       - list all
+       - detail id
    - category
+     - CRUD
    - order
+     - CRUD
    - reciew
    - blogs
    - transaction
